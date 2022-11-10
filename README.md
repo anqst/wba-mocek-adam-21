@@ -1,3 +1,3 @@
 # wba-mocek-adam-21
 
-public archive of some bad #### work fro last year idk
+public archive of some bad #### work from last year idk
