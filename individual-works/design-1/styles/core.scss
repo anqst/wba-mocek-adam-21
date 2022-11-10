@@ -1,0 +1,173 @@
+@import "reset";
+@import "config";
+
+/* Global */
+
+body {
+  background-color: $primary-background-color;
+  color: $primary-text-color;
+  font-family: $default-font;
+  font-size: $default-font-size;
+  line-height: $default-line-height;
+}
+
+a:hover {
+  color: $action-text-color;
+}
+
+.noselect {
+  user-select: none;
+}
+
+/* Header */
+
+header {
+  color: $secondary-text-color;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+
+  #title-container {
+    background-color: $secondary-background-color-dark;
+
+    div {
+      font-size: 1.5rem;
+    }
+
+    img#homepage-icon {
+      height: 40px;
+    }
+  }
+
+  nav {
+    font-size: 1.3rem;
+    background-color: $secondary-background-color;
+
+    ul li {
+      padding-bottom: 0.2rem;
+    }
+
+    ul li.current {
+      border-bottom: $text-underline;
+    }
+  }
+}
+
+header > nav,
+header > #title-container {
+  width: 100%;
+  padding: 1.8rem 0rem;
+}
+
+header > #title-container > div,
+header > nav > ul {
+  @include default-container;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  gap: 2rem;
+}
+
+/* Image container */
+
+.image-container {
+  width: 100%;
+  height: 250px;
+
+  border-top: $wrap-border;
+  border-bottom: $wrap-border;
+
+  background-image: url("../images/restaurant1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .gradient {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+
+    .page-title {
+      @include default-container;
+      height: 100%;
+
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: flex-start;
+
+      h1 {
+        color: $secondary-text-color;
+        font-size: 4rem;
+      }
+    }
+  }
+}
+
+/* Main container */
+
+.main-container {
+  @include default-container;
+  margin-bottom: 2rem;
+}
+
+.main-container > section {
+  text-align: justify;
+  margin-top: 2rem;
+}
+
+/* Footer */
+
+footer {
+  background-color: $secondary-background-color;
+  color: $secondary-text-color;
+  font-family: $details-font;
+
+  border-top: $wrap-border;
+  border-bottom: $ending-border;
+}
+
+footer > .footer-container {
+  @include default-container;
+  padding: 1.8rem 0rem;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+  gap: 2rem;
+
+  h2 {
+    padding-bottom: 0.4rem;
+  }
+
+  p {
+    font-size: 1rem;
+    padding-bottom: 0.2rem;
+  }
+
+  #footer-infobox {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 5rem;
+  }
+
+  #copyright {
+    align-self: flex-end;
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}

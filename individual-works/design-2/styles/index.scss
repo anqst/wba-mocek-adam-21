@@ -1,0 +1,195 @@
+@import "config";
+
+// Main
+#trailer{
+
+    @include container;
+    padding: 0px;
+
+    #trailer-box{
+
+        color: $secondary-text-color;
+        background-color: $input-color;
+        padding: 1rem;
+        margin-top: 50px;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: flex-start;
+        gap: 28px;
+
+        h2{
+            font-size: 1.25rem;
+            @include upper-case;
+        }
+
+        p{
+            font-size: 0.8125rem;
+        }
+
+        button{
+            color: $primary-text-color;
+            background-color: rgba($color: #F8F7EC, $alpha: 0.3)
+        }
+    }
+}
+
+.container{
+
+    #slideshow-introduction{
+        @include upper-case;
+        text-align: center;
+        h3{
+            font-size: 0.6875rem;
+        }
+    }
+
+    #image-slideshow{
+        display: grid;
+        gap: 40px;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: start;
+
+        .flex-item{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            align-content: flex-start;
+            gap: 20px;
+
+            .item-text{
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: flex-start;
+                align-content: flex-start;
+                gap: 8px;
+
+                h3{
+                    @include upper-case;
+                    font-size: 0.75rem;
+                }
+                p{
+                    font-size: 0.625rem;
+                }
+            }
+        }
+    }
+}
+
+// Media queries
+
+@media screen and (min-width: 426px) {
+
+    .container{
+
+        #slideshow-introduction{
+            h3{
+                font-size: 1.2rem;
+            }
+        }
+    
+        #image-slideshow{
+
+            .flex-item{
+
+                .item-text{
+
+                    gap: 15px;
+    
+                    h3{
+                        font-size: 0.9rem;
+                    }
+                    p{
+                        font-size: 0.75rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+
+    #trailer{
+
+        background-image: url("../images/hero-image.svg");
+        background-color: #bfffea;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        height: 769px;
+        width: 100%;
+        padding: 30px;
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        align-items: flex-end;
+        align-content: flex-end;
+
+        #trailer-box{
+            width: 650px;
+            height: 350px;
+
+            @include transparent-input;
+
+            h2{
+                font-size: 3rem;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+
+            p{
+                font-size: 1.5rem;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+
+            button{
+                color: $secondary-text-color;
+                background-color: $input-color;
+            }
+        }
+    }
+
+    .container{
+
+        #slideshow-introduction{
+            padding: 20px 0px;
+            h3{
+                font-size: 2.25rem;
+            }
+        }
+
+        #image-slideshow{
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+
+            .flex-item{
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                align-content: flex-start;
+                gap: 20px;
+
+                .item-text{
+                    
+                    align-items: center;
+
+                    h3{
+                        font-size: 1.5rem;
+                        text-align: center;
+                    }
+                    p{
+                        font-size: 1.125rem;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

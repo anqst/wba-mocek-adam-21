@@ -1,0 +1,39 @@
+.image-gallery {
+  padding: 2rem 0;
+
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+}
+
+.image-gallery > div.image-item {
+  position: relative;
+}
+
+.image-gallery > div.image-item div.shadowbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image-gallery > div.image-item img {
+  width: 100%;
+}
+
+.image-gallery > div.image-item h3 {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+  color: rgb(224, 224, 224);
+
+  text-align: center;
+  font-size: 1.2rem;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  padding: 0.7rem 0;
+  width: 100%;
+}

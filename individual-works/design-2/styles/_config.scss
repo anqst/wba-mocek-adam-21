@@ -1,0 +1,64 @@
+//
+// IMPORT FONTS
+@font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 300;
+    src: url(../fonts/lato-300.ttf);
+}
+@font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/lato-400.ttf);
+}
+@font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/lato-500.ttf);
+}
+@font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 600;
+    src: url(../fonts/lato-600.ttf);
+}
+@font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/lato-700.ttf);
+}
+@font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 800;
+    src: url(../fonts/lato-800.ttf);
+}
+@font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 900;
+    src: url(../fonts/lato-900.ttf);
+}
+$primary-font: 'Lato', sans-serif;
+//
+// COLORS
+$primary-background-color: #EEEDE9;
+$secondary-background-color: #CBC1B1;
+$input-color: #7C7474;
+$primary-text-color: #000000;
+$secondary-text-color: #F8F7EC;
+//
+// MIXINS
+@mixin transparent-input {
+    background-color: rgba($color: $input-color, $alpha: 0.3);
+}
+@mixin container {
+    width: 80%;
+    margin: auto;
+}
+@mixin upper-case {
+    text-transform: uppercase;
+}

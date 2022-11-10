@@ -1,0 +1,90 @@
+// https://www.w3schools.com/tags/tag_input.asp
+// https://www.w3schools.com/tags/tag_button.asp
+// https://www.w3schools.com/tags/tag_textarea.asp
+
+@import "config";
+
+// Main
+.container{
+
+    #contact-heading{
+        h3{
+            font-size: 1.25rem;
+            @include upper-case;
+        }
+    }
+
+    .contact-form{
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: flex-start;
+        gap: 20px;
+    
+        .data-input{
+            width: 100%;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(1, 1fr);
+
+            input{
+                width: 100%;
+            }
+        }
+    
+        .message-input{
+
+            width: 100%;
+
+            textarea{
+                min-width: 100%;
+                max-width: 100%;
+                min-height: 200px;
+            }
+        }
+    }
+}
+
+// Media queries
+@media screen and (min-width: 426px) {
+
+    .container{
+
+        #contact-heading{
+            h3{
+                font-size: 1.75rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+
+    .container{
+
+        #contact-heading{
+            h3{
+                font-size: 3rem;
+            }
+        }
+
+        .contact-form {
+    
+            .data-input{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1025px) {
+
+    .container{
+
+        .contact-form {
+            width: 70%;
+        }
+    }
+}

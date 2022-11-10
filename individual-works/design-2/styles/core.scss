@@ -1,0 +1,207 @@
+@import "reset";
+@import "config";
+
+// Global
+
+*{
+    letter-spacing: 0.1rem;
+}
+
+body{
+    background-color: $primary-background-color;
+    color: $primary-text-color;
+    font-family: $primary-font;
+
+    font-style: normal;
+    font-size: medium;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+a:hover{
+    color: #777777;
+}
+
+a:active{
+    color: #CCCCCC;
+}
+
+img{
+    height: 100%;
+}
+
+::placeholder{
+    color: $primary-text-color;
+    opacity: 1;
+}
+
+input, textarea{
+    color: $primary-text-color;
+    @include transparent-input;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.6875rem;
+}
+
+button.prompt-button{
+    @include upper-case;
+    background-color: $input-color;
+    color: $secondary-text-color;
+    font-weight: 600;
+    font-size: 0.6875rem;
+    
+    box-shadow: 0px 5px 10px 0px rgba($color: rgb(0,0,0), $alpha: 0.5) ;
+    padding: 0.6rem 1.5rem;
+}
+
+.container{
+    @include container;
+}
+
+.container.main-container{
+    padding: 50px 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    gap: 50px;
+}
+
+.color-cover{
+    width: 100%;
+    background-color: $secondary-background-color;
+}
+
+.desktop-only{
+    display: none;
+}
+
+// Header, footer
+
+header{
+    .color-cover{
+        
+        height: 80px;
+
+        .container{
+
+            height: 100%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            align-content: flex-start;
+
+            div#logo{
+                height: 100%;
+            }
+
+            nav#navbar{
+
+                div#mobile-logo{
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+ul#desktop-navigation{
+
+    display: none;
+
+    li{
+        font-size: 0.9rem;
+        padding: 0.6rem;
+        @include upper-case;
+    }
+
+    li.current{
+        @include transparent-input;
+    }
+}
+
+ul#desktop-navigation, h2, h3{
+    font-weight: 700;
+}
+
+footer{
+    .color-cover{
+
+        height: 88px;
+
+        .container{
+
+            height: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            align-content: flex-start;
+
+            #final-text{
+
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: flex-start;
+                align-items: center;
+                align-content: flex-start;
+                gap: 0.2rem;
+
+                p{
+                    @include upper-case;
+                    text-align: center;
+                    font-size: 0.75rem;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+// Media queries
+
+@media screen and (min-width: 769px) {
+
+    input, textarea{
+        font-size: 1rem;
+    }
+
+    button.prompt-button{
+        font-size: 1.125rem;
+    }
+
+    header{
+        .color-cover{
+            height: 150px;
+        }
+    }
+
+    footer{
+        .color-cover{
+            height: 150px;
+        }
+    }
+
+    .mobile-only{
+        display: none;
+    }
+
+    ul#desktop-navigation{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        align-content: flex-start;
+        gap: 0.4rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    ul#desktop-navigation{
+        li{
+            font-size: 1.125rem;
+        }
+    }
+}

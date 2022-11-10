@@ -1,0 +1,185 @@
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/lato-300.ttf);
+}
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/lato-400.ttf);
+}
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/lato-500.ttf);
+}
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  src: url(../fonts/lato-600.ttf);
+}
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/lato-700.ttf);
+}
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 800;
+  src: url(../fonts/lato-800.ttf);
+}
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 900;
+  src: url(../fonts/lato-900.ttf);
+}
+#trailer {
+  width: 80%;
+  margin: auto;
+  padding: 0px;
+}
+#trailer #trailer-box {
+  color: #F8F7EC;
+  background-color: #7C7474;
+  padding: 1rem;
+  margin-top: 50px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  gap: 28px;
+}
+#trailer #trailer-box h2 {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+#trailer #trailer-box p {
+  font-size: 0.8125rem;
+}
+#trailer #trailer-box button {
+  color: #000000;
+  background-color: rgba(248, 247, 236, 0.3);
+}
+
+.container #slideshow-introduction {
+  text-transform: uppercase;
+  text-align: center;
+}
+.container #slideshow-introduction h3 {
+  font-size: 0.6875rem;
+}
+.container #image-slideshow {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: start;
+}
+.container #image-slideshow .flex-item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  gap: 20px;
+}
+.container #image-slideshow .flex-item .item-text {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 8px;
+}
+.container #image-slideshow .flex-item .item-text h3 {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+.container #image-slideshow .flex-item .item-text p {
+  font-size: 0.625rem;
+}
+
+@media screen and (min-width: 426px) {
+  .container #slideshow-introduction h3 {
+    font-size: 1.2rem;
+  }
+  .container #image-slideshow .flex-item .item-text {
+    gap: 15px;
+  }
+  .container #image-slideshow .flex-item .item-text h3 {
+    font-size: 0.9rem;
+  }
+  .container #image-slideshow .flex-item .item-text p {
+    font-size: 0.75rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  #trailer {
+    background-image: url("../images/hero-image.svg");
+    background-color: #bfffea;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 769px;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-content: flex-end;
+  }
+  #trailer #trailer-box {
+    width: 650px;
+    height: 350px;
+    background-color: rgba(124, 116, 116, 0.3);
+  }
+  #trailer #trailer-box h2 {
+    font-size: 3rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  #trailer #trailer-box p {
+    font-size: 1.5rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  #trailer #trailer-box button {
+    color: #F8F7EC;
+    background-color: #7C7474;
+  }
+  .container #slideshow-introduction {
+    padding: 20px 0px;
+  }
+  .container #slideshow-introduction h3 {
+    font-size: 2.25rem;
+  }
+  .container #image-slideshow {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .container #image-slideshow .flex-item {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    gap: 20px;
+  }
+  .container #image-slideshow .flex-item .item-text {
+    align-items: center;
+  }
+  .container #image-slideshow .flex-item .item-text h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .container #image-slideshow .flex-item .item-text p {
+    font-size: 1.125rem;
+    text-align: center;
+  }
+}/*# sourceMappingURL=index.css.map */
